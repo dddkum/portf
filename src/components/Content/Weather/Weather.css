@@ -1,0 +1,42 @@
+.weather-app {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-input-label {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 auto;
+    height: 20px;
+}
+
+#city {
+    width: 300px;
+    text-align: center;
+}
+
+#weather-info-container {
+    background-color: #d6d6d6;
+    border: 4mm ridge rgba(211, 220, 50, .6);
+    margin: 20px;
+    padding: 10px;
+}
+
+#weather-flex{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in;
+  }
