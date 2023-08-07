@@ -10,6 +10,7 @@ import GitHub from './components/Content/GitHub/GitHub';
 import Header from './components/Header/Header';
 import ContentWrapper from './components/Content/ContentWrapper';
 import Weather from './components/Content/Weather/Weather';
+import ArtGenerator from './components/Content/ArtGenerator/ArtGenerator';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/github' element={<GitHub />} />
         <Route path='/weather' element={<Weather />} />
+        <Route path='/art' element={<ArtGenerator />} />
       </Routes>
     </BrowserRouter>
   );

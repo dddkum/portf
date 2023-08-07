@@ -15,6 +15,7 @@ const Header = () => {
                 <li><Link to='/contacts'>Контакты</Link></li>
                 <li><Link to='/github'>GitHub</Link></li>
                 <li><Link to='/weather'>Погодка</Link></li>
+                <li><Link to='/art'>Создать прикол</Link></li>
             </ul>
             </div>
         <img className="logo" src={CloudImage} alt="logo" />
