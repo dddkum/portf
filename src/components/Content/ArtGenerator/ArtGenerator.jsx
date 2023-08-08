@@ -28,9 +28,20 @@ const generateRandomShape = (ctx, width, height) => {
 
   if (shapeType === 0) { // прямугольник
     ctx.rect(x, y, size, size);
-  } else if (shapeType === 1) { // круг
+    ctx.stroke();
+} else if (shapeType === 1) { // круг
     ctx.arc(x, y, size / 2, 0, Math.PI * 2);
-  } // можно добавить больше фигур
+    ctx.stroke();
+} else if (shapeType === 2) { // треугольник
+    ctx.beginPath();
+    ctx.moveTo(x, y - size / 2);
+    ctx.lineTo(x + size / 2, y + size / 2);
+    ctx.lineTo(x - size / 2, y + size / 2);
+    ctx.closePath();
+    ctx.stroke();
+}  // можно добавить больше фигур
+
+
 
   ctx.fill();
   ctx.closePath();

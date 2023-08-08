@@ -1,11 +1,12 @@
 .wrapper {
     display: flex;
     height: 50px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     background-color: #fff;
     padding: 15px;
     justify-content: center; 
+   text-align: center;
 }
 
 .navigation {
