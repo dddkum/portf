@@ -9,6 +9,7 @@ import GitHub from './components/Content/GitHub/GitHub';
 import ContentWrapper from './components/Content/ContentWrapper';
 import Weather from './components/Content/Weather/Weather';
 import ArtGenerator from './components/Content/ArtGenerator/ArtGenerator';
+import Countries from './components/Content/Countries/Countries';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/github' element={<GitHub />} />
         <Route path='/weather' element={<Weather />} />
         <Route path='/art' element={<ArtGenerator />} />
+        <Route path='/countries' element={<Countries />} />
       </Routes>
     </BrowserRouter>
   );

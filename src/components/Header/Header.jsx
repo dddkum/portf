@@ -16,6 +16,7 @@ const Header = () => {
                 <li><Link to='/github'>GitHub</Link></li>
                 <li><Link to='/weather'>Погодка</Link></li>
                 <li><Link to='/art'>Создать прикол</Link></li>
+                <li><Link to='/countries'>Страны мира</Link></li>
             </ul>
             </div>
         <img className="logo" src={CloudImage} alt="logo" />

@@ -39,7 +39,7 @@ const generateRandomShape = (ctx, width, height) => {
     ctx.lineTo(x - size / 2, y + size / 2);
     ctx.closePath();
     ctx.stroke();
-}  // можно добавить больше фигур
+}  // так я добавляю фигурки сюда :)
 
 
 
