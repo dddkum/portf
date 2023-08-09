@@ -9,14 +9,14 @@
   
   .paginationButtons li {
     margin: 0 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 4px;
   }
   
   .paginationButtons li a {
     display: block;
     padding: 0.5rem 1rem;
-    color: #0177aa;
+    color: #ffffff;
     text-decoration: none;
   }
   
@@ -29,11 +29,12 @@
   .paginationDisabled {
     opacity: 0.5;
     pointer-events: none;
-    cursor: not-allowed;
+    cursor:not-allowed;
+    text-decoration: line-through;
   }
   
   .paginationActive{
-    background-color: #0177aa;
+    background-color: #9bcfe6;
     color: white;
     font-weight: bold;
   }
