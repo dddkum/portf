@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaSmile } from 'react-icons/fa';
-import './Cursor.css';
+import './Cursor.scss';
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

@@ -1,12 +1,16 @@
 import React from 'react';
-import "./CountryCard.css";
+import "./CountryCard.scss";
+import { Link } from 'react-router-dom';
 
 const CountryCard = ({ country }) => {
   return (
     <div className='country-card-container'>
     <div className="country-card">
-      <img src={country.flags.svg} alt={`Flag of ${country.name.common}`} />
+    <Link to='/countries/country' className='flags-link'>
+      <img src={country.flags.svg}
+      alt={`Flag of ${country.name.common}`} />
       <h2>{country.name.common}</h2>
+    </Link>
     </div>
     </div>
   );

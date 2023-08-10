@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import html2canvas from 'html2canvas';
-import './ArtGenerator.css';
+import './ArtGenerator.scss';
 
 const ArtContainer = styled.canvas`
   display: block;

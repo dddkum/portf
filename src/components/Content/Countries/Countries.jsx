@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CountryList from './CountryList';
 import ReactPaginate from 'react-paginate';
-import './Countries.css'
+import './Countries.scss'
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
@@ -32,11 +32,11 @@ const Countries = () => {
 
   return (
     <div className='container'>
-      <h1>Countries of the World</h1>
+      <h1>Страны мира</h1>
       <div className='paginations'>
       <ReactPaginate
-        previousLabel={"prev"}
-        nextLabel={"next"}
+        previousLabel={"назад"}
+        nextLabel={"вперед"}
         pageCount={pageCount}
         onPageChange={changePage}
         containerClassName={"paginationButtons"}
