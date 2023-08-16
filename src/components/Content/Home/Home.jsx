@@ -2,14 +2,22 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 function Home() {
-  const [posts, setPosts] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts/')
-    .then(response => {
-      setPosts(response.data);
+    Promise.all([
+      axios.get('https://jsonplaceholder.typicode.com/posts/'),
+      axios.get("https://jsonplaceholder.typicode.com/users"),
+      axios.get("https://jsonplaceholder.typicode.com/photos")
+  ])
+    .then(([postsResponse, usersResponse, photosResponse]) => {
+      setData([
+        ...postsResponse.data,
+        ...usersResponse.data,
+        ...photosResponse.data,
+      ]);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
   }, []);
@@ -18,10 +26,18 @@ function Home() {
     <div className="posts-container">
       <p>Блаблабла</p>
       <div>
-        {posts.map(post => (
-          <div key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+        {data.map((item) => (
+          <div key={item.id}>
+            {item.title && <h2>{item.title}</h2>}
+            {item.body && <p>{item.body}</p>}
+            {item.name && <h2>{item.name}</h2>}
+            {item.email && <p>{item.email}</p>}
+            {item.thumbnailUrl && (
+              <>
+                <h3>{item.title}</h3>
+                <img src={item.thumbnailUrl} alt={item.title} />
+              </>
+            )}
           </div>
         ))}
       </div>
