@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./Header.scss";
+import Logo from "../../img/Logo.png";
 
 const Navigation = () => {
   return (
@@ -12,7 +13,7 @@ const Navigation = () => {
         <Navbar.Brand href="/home">
               <img
               alt="Logo"
-              src="./Logo.png"  
+              src={Logo}
               width="50"
               height="50"
               className="d-inline-block align-top"

@@ -5,23 +5,21 @@ import MainPage from './components/Content/MainPage/MainPage';
 import Jsonplaceholder from './components/Content/Jsonplaceholder/Jsonplaceholder';
 import About from './components/Content/About/About';
 import Contacts from './components/Content/Contacts/Contacts';
-import GitHub from './components/Content/GitHub/GitHub';
 import Weather from './components/Content/Weather/Weather';
 import ArtGenerator from './components/Content/ArtGenerator/ArtGenerator';
 import Countries from './components/Content/Countries/Countries';
-import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
 import Cursor from './components/Cursor/Cursor';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="main-container">
-      <Header />
+      <Navigation />
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<Contacts />} />
-        <Route path='/github' element={<GitHub />} />
         <Route path='/weather' element={<Weather />} />
         <Route path='/art' element={<ArtGenerator />} />
         <Route path='/countries' element={<Countries />} />

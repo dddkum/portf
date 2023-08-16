@@ -4,6 +4,7 @@ import "./MainPage.scss";
 const MainPage = () => {
   return (
     <div>MainPage</div>
+    
   )
 }
 
