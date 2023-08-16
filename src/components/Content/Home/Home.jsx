@@ -28,7 +28,7 @@ function Home() {
       <div>
         {data.map((item) => (
           <div key={item.id}>
-            {item.title && <h2>{item.title}</h2>}
+            <h2>{item.title}</h2>
             {item.body && <p>{item.body}</p>}
             {item.name && <h2>{item.name}</h2>}
             {item.email && <p>{item.email}</p>}
