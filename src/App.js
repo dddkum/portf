@@ -17,7 +17,6 @@ function App() {
     <BrowserRouter>
     <div className="main-container">
       <Header />
-      <Cursor />
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/home' element={<Home />} />
@@ -27,6 +26,7 @@ function App() {
         <Route path='/weather' element={<Weather />} />
         <Route path='/art' element={<ArtGenerator />} />
         <Route path='/countries' element={<Countries />} />
+        <Route path='/smile' element={<Cursor />} />
       </Routes>
     </div>
     <style>
