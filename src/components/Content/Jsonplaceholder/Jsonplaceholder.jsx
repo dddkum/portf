@@ -24,7 +24,7 @@ function Home() {
   
   return (
     <div className="posts-container">
-      <p>Блаблабла</p>
+      <h1>Данные взятые из Jsonplaceholder'a</h1>
       <div>
         {data.map((item) => (
           <div key={item.id}>

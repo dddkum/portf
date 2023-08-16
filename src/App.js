@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.scss';
 import MainPage from './components/Content/MainPage/MainPage';
-import Home from './components/Content/Home/Home';
+import Jsonplaceholder from './components/Content/Jsonplaceholder/Jsonplaceholder';
 import About from './components/Content/About/About';
 import Contacts from './components/Content/Contacts/Contacts';
 import GitHub from './components/Content/GitHub/GitHub';
@@ -19,7 +19,6 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/github' element={<GitHub />} />
@@ -27,6 +26,7 @@ function App() {
         <Route path='/art' element={<ArtGenerator />} />
         <Route path='/countries' element={<Countries />} />
         <Route path='/smile' element={<Cursor />} />
+        <Route path='/jsonplaceholderAPI' element={<Jsonplaceholder />} />
       </Routes>
     </div>
     <style>

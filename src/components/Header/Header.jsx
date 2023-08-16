@@ -21,9 +21,9 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link href="/">Main page</Nav.Link>
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/about">About me</Nav.Link>
+          <Nav.Link href="/">Главная страница</Nav.Link>
+            <Nav.Link href="/home">Домой</Nav.Link>
+            <Nav.Link href="/about">Обо мне</Nav.Link>
             <Nav.Link href="/contacts">Контакты</Nav.Link>
             <NavDropdown title="Приколоться здесь" id="basic-nav-dropdown">
               <NavDropdown.Item href="/art">Арт генератор</NavDropdown.Item>
@@ -36,6 +36,10 @@ const Navigation = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item href="/smile">
                 Бегающий за курсором смайлик
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/jsonplaceholderAPI">
+                Работа с АПИ из jsonplaceholder
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
