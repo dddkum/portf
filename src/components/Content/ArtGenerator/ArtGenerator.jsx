@@ -1,15 +1,15 @@
-import React, { useRef, useState } from 'react';
-import styled from '@emotion/styled';
-import './ArtGenerator.scss';
+import React, { useRef, useState } from "react";
+import styled from "@emotion/styled";
+import "./ArtGenerator.scss";
 
 const ArtContainer = styled.canvas`
   display: block;
   margin: 0 auto;
-  background: ${({ backgroundColor }) => backgroundColor || 'white'};
+  background: ${({ backgroundColor }) => backgroundColor || "white"};
 `;
 
 const randomColor = () => {
-  const colors = ['red', 'blue', 'green', 'yellow', 'pink'];
+  const colors = ["red", "blue", "green", "yellow", "pink"];
   const index = Math.floor(Math.random() * colors.length);
   return colors[index];
 };
@@ -24,36 +24,37 @@ const generateRandomShape = (ctx, width, height) => {
   ctx.fillStyle = shapeColor;
   ctx.beginPath();
 
-  if (shapeType === 0) { // прямугольник
+  if (shapeType === 0) {
+    // прямугольник
     ctx.rect(x, y, size, size);
     ctx.stroke();
-} else if (shapeType === 1) { // круг
+  } else if (shapeType === 1) {
+    // круг
     ctx.arc(x, y, size / 2, 0, Math.PI * 2);
     ctx.stroke();
-} else if (shapeType === 2) { // треугольник
+  } else if (shapeType === 2) {
+    // треугольник
     ctx.beginPath();
     ctx.moveTo(x, y - size / 2);
     ctx.lineTo(x + size / 2, y + size / 2);
     ctx.lineTo(x - size / 2, y + size / 2);
     ctx.closePath();
     ctx.stroke();
-}  // так я добавляю фигурки сюда :)
-
-
+  } // так я добавляю фигурки сюда :)
 
   ctx.fill();
   ctx.closePath();
 };
 
 const ArtGenerator = () => {
-  const [backgroundColor, setBackgroundColor] = useState('white');
+  const [backgroundColor, setBackgroundColor] = useState("white");
   const canvasRef = useRef(null);
 
   const generateAbstractArt = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     const width = canvas.width;
     const height = canvas.height;
 
@@ -70,17 +71,21 @@ const ArtGenerator = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
-    link.download = 'abstract-art.png';
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "abstract-art.png";
     link.click();
   };
 
   return (
     <div>
-      <div id='arts'>
-      <button id='create smpl' onClick={generateAbstractArt}>Создать</button>
-      <button id='save smpl' onClick={saveAsImage}>Сохранить как изображение</button>
+      <div id="arts">
+        <button id="create smpl" onClick={generateAbstractArt}>
+          Создать
+        </button>
+        <button id="save smpl" onClick={saveAsImage}>
+          Сохранить как изображение
+        </button>
       </div>
       <ArtContainer
         ref={canvasRef}

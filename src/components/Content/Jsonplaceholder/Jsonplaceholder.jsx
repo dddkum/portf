@@ -1,27 +1,27 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     Promise.all([
-      axios.get('https://jsonplaceholder.typicode.com/posts/'),
+      axios.get("https://jsonplaceholder.typicode.com/posts/"),
       axios.get("https://jsonplaceholder.typicode.com/users"),
-      axios.get("https://jsonplaceholder.typicode.com/photos")
-  ])
-    .then(([postsResponse, usersResponse, photosResponse]) => {
-      setData([
-        ...postsResponse.data,
-        ...usersResponse.data,
-        ...photosResponse.data,
-      ]);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+      axios.get("https://jsonplaceholder.typicode.com/photos"),
+    ])
+      .then(([postsResponse, usersResponse, photosResponse]) => {
+        setData([
+          ...postsResponse.data,
+          ...usersResponse.data,
+          ...photosResponse.data,
+        ]);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
-  
+
   return (
     <div className="posts-container">
       <h1>Данные взятые из Jsonplaceholder'a</h1>

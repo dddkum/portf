@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaSmile } from 'react-icons/fa';
-import './Cursor.scss';
+import React, { useState, useEffect, useRef } from "react";
+import { FaSmile } from "react-icons/fa";
+import "./Cursor.scss";
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -12,9 +12,9 @@ const Cursor = () => {
       setTarget({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener("mousemove", onMouseMove);
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
 
@@ -36,7 +36,7 @@ const Cursor = () => {
 
   return (
     <FaSmile
-      className='cursor-emoji'
+      className="cursor-emoji"
       style={{ left: `${position.x}px`, top: `${position.y}px` }}
     />
   );

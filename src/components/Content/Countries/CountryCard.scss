@@ -1,30 +1,29 @@
 .country-card-container {
+  display: flex;
+}
+
+.country-card {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+
+  img {
     display: flex;
-  }
-  
-  .country-card {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-  
-    img {
-      display: flex;
-      max-width: 300px;
-      height: 200px;
-    }
-  }
-  
-  .flags-link {
-    text-decoration: none;
-    color:azure;
-  }
-
-  .country-link {
-    text-decoration: none;
-    color: white;
-  }
-
-  .country-flag {
+    max-width: 300px;
     height: 200px;
   }
-  
+}
+
+.flags-link {
+  text-decoration: none;
+  color: azure;
+}
+
+.country-link {
+  text-decoration: none;
+  color: white;
+}
+
+.country-flag {
+  height: 200px;
+}
