@@ -1,18 +1,21 @@
 import React from 'react';
 import "./CountryCard.scss";
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-const CountryCard = ({ country }) => {
+const CountryCard = ({country}) => {
   return (
-    <div className='country-card-container'>
-    <div className="country-card">
-    <Link to='/countries/country' className='flags-link'>
-      <img src={country.flags.svg}
-      alt={`Флаг ${country.name.common}`} />
-      <h2>{country.name.common}</h2>
-    </Link>
-    </div>
-    </div>
+    <Card style={{ width: '20rem' }}>
+      <Card.Img varint="top" src={country.flags.svg} className="country-flag" />
+      <Card.Body>
+        <Card.Title><h2>{country.name.common}</h2></Card.Title>
+        <Card.Text>
+          <h5>{country.region}</h5>
+        </Card.Text>
+        <Button variant="primary"><Link to={`country ${country.name.common}`} className='country-link'> Go somewhere </Link></Button>
+      </Card.Body>
+    </Card>
   );
 }
 
