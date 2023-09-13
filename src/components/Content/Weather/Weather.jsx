@@ -7,6 +7,8 @@ function Weather() {
   const [weather, setWeather] = useState(null);
   const [isAppVisible, setIsAppVisible] = useState(false);
   const [isNewWeatherDataFetched, setIsNewWeatherDataFetched] = useState(false);
+  const [isErrorVisible, setIsErrorVisible] = useState(false);
+  const [isErrorText, setIsErrorText] = useState("");
 
   const fetchWeatherData = async (cityName) => {
     const API_KEY = "4821680c37dd41ca95e85152230408";
@@ -18,12 +20,28 @@ function Weather() {
       setWeather(response.data);
       setIsNewWeatherDataFetched(true);
     } catch (error) {
-      console.error("Ошибка:", error);
+      setIsErrorText(`Ошибка: ${error}`);
+      setIsErrorVisible(true)
     }
   };
 
   return (
     <div className="weather-app">
+    {isErrorVisible && (
+  <div className="error-modal">
+    <div className="error-modal-content">
+      <h2>Ошибка</h2>
+      <p>{isErrorText}</p>
+      <button
+        onClick={() => {
+          setIsErrorVisible(false);
+        }}
+      >
+        Закрыть
+      </button>
+    </div>
+  </div>
+)}
       {!isAppVisible ? (
         <button
           type="button"
