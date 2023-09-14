@@ -32,7 +32,7 @@ const Cursor = () => {
     return () => {
       cancelAnimationFrame(animationFrameRef.current);
     };
-  }, [target]);
+  }, [position.x, position.y, target]);
 
   return (
     <FaSmile

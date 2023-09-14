@@ -1,3 +1,11 @@
+$main-width: 500px;
+$city-width: 300px;
+$fade-in-duration: 1s;
+$container-bg: #d6d6d6;
+$error-modal-bg: rgba(0, 0, 0, 0.4);
+$modal-content-bg: #fefefe;
+$border-color: rgba(211, 220, 50, .6);
+
 .weather-app {
   display: flex;
   justify-content: center;
@@ -6,19 +14,19 @@
 .weather-input-label {
   display: flex;
   justify-content: space-around;
-  width: 500px;
+  width: $main-width;
   margin: 0 auto;
   height: 20px;
 }
 
 #city {
-  width: 300px;
+  width: $city-width;
   text-align: center;
 }
 
 #weather-info-container {
-  background-color: #d6d6d6;
-  border: 4mm ridge rgba(211, 220, 50, .6);
+  background-color: $container-bg;
+  border: 4mm ridge $border-color;
   margin: 20px;
   padding: 10px;
 }
@@ -39,7 +47,7 @@
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn $fade-in-duration ease-in;
 }
 
 .error-modal {
@@ -50,11 +58,11 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: $error-modal-bg;
 }
 
 .error-modal-content {
-  background-color: #fefefe;
+  background-color: $modal-content-bg;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
