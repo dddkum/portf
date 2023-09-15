@@ -41,8 +41,8 @@ const Navigation = () => {
                 Бегающий за курсором смайлик
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/jsonplaceholderAPI">
-                Работа с АПИ из jsonplaceholder
+              <NavDropdown.Item href="/comments">
+                Комментарии
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

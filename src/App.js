@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.scss';
 import MainPage from './components/Content/MainPage/MainPage';
-import Jsonplaceholder from './components/Content/Jsonplaceholder/Jsonplaceholder';
+import {Comments} from './components/Content/Comments/Comments';
 import About from './components/Content/About/About';
 import Contacts from './components/Content/Contacts/Contacts';
 import Weather from './components/Content/Weather/Weather';
@@ -24,7 +24,7 @@ function App() {
         <Route path='/art' element={<ArtGenerator />} />
         <Route path='/countries' element={<Countries />} />
         <Route path='/smile' element={<Cursor />} />
-        <Route path='/jsonplaceholderAPI' element={<Jsonplaceholder />} />
+        <Route path='/comments' element={<Comments />} />
       </Routes>
     </div>
     <style>
