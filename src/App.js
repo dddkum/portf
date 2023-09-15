@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import MainPage from './components/Content/MainPage/MainPage';
 import {Comments} from './components/Content/Comments/Comments';
-import About from './components/Content/About/About';
+import {About} from './components/Content/About/About';
 import Contacts from './components/Content/Contacts/Contacts';
 import Weather from './components/Content/Weather/Weather';
 import ArtGenerator from './components/Content/ArtGenerator/ArtGenerator';

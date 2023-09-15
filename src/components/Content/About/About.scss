@@ -1,1 +1,37 @@
+.about-section {
+  padding-top: 50px;
+}
 
+.my-photo {
+  border: 7px solid #fff;
+}
+
+.carousel {
+  padding-top: 20px;
+  margin: 0 auto;
+  vertical-align: middle;
+  max-width: 600px;
+}
+
+.carousel-image {
+  width: 600px;
+  height: 300px;
+}
+
+.contacts-button,
+.works-button {
+  width: 500px;
+  height: 70px;
+}
+
+.contacts-text,
+.works-text {
+  font-size: 40px;
+  text-decoration: none;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.contacts-button {
+  margin-top: 50px;
+}
